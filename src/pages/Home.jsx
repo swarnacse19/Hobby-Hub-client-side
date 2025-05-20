@@ -1,9 +1,10 @@
 import React from 'react';
+import HubSlider from '../Components/HubSlider';
 
 function Home() {
   return (
     <div>
-      <h1>home</h1>
+      <HubSlider></HubSlider>
     </div>
   );
 }
