@@ -1,10 +1,31 @@
-import React, { use } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
 // import { AuthContext } from "../provider/AuthProvider";
 //import { ToastContainer, toast } from "react-toastify";
 import hobbyHub from "../assets/hobbyHub.png";
+import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
 
 function Navbar() {
+
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    const saved = localStorage.getItem('home-theme') || 'light';
+    setTheme(saved);
+    document.body.className = saved;
+
+    return () => {
+      document.body.className = '';
+    };
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('home-theme', newTheme);
+    document.body.className = newTheme;
+  };
+
   const links = (
     <>
         <NavLink to="/">Home</NavLink>
@@ -61,7 +82,7 @@ function Navbar() {
         <ul className="menu menu-horizontal px-1 gap-7 text-xl font-light">{links}</ul>
       </div>
       <div className="navbar-end">
-      <div className="flex gap-3">
+      <div className="flex items-center gap-3">
         {/* <img
           className="w-12 rounded-full"
           src={`${user ? user.photoURL : userIcon}`}
@@ -79,8 +100,11 @@ function Navbar() {
           <Link to="/login" className="btn bg-blue-600 text-white font-semibold">
             Login
           </Link>
-        )} */} <button className="btn bg-white text-pink-700 border-2 border-pink-700 font-semibold hover:bg-pink-200">Login</button>
-        <button className="btn bg-white text-green-700 border-2 border-green-700 font-semibold hover:bg-green-200">Register</button>
+        )} */} <Link to="/login" className="btn bg-white text-pink-700 border-2 border-pink-700 font-semibold hover:bg-pink-200">Login</Link>
+        <Link to="/register" className="btn bg-white text-green-700 border-2 border-green-700 font-semibold hover:bg-green-200">Register</Link>
+        <div onClick={toggleTheme}>    
+                  {theme === 'light' ? <MdDarkMode size={30}/> : <MdOutlineLightMode size={30}/>}
+              </div>
       </div>
       </div>
       {/* <ToastContainer position="top-right" autoClose={3000} /> */}

@@ -1,31 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import HubSlider from '../Components/HubSlider';
 import Lottie from 'lottie-react';
 import animationData from './Welcome.json';
-import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
 
 function Home() {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('home-theme') || 'light';
-    setTheme(savedTheme);
-    document.body.className = savedTheme; // apply to body
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('home-theme', newTheme);
-    document.body.className = newTheme;
-  };
-
+  
   return (
     <div className='transition-all duration-300'>
 
-      <div className='flex gap-2 justify-end my-4' onClick={toggleTheme}>   <span>Change Mode</span>    
+      {/* <div className='flex gap-2 justify-end my-4' onClick={toggleTheme}>   <span>Change Mode</span>    
           {theme === 'light' ? <MdDarkMode size={30}/> : <MdOutlineLightMode size={30}/>}
-      </div>
+      </div> */}
       <HubSlider></HubSlider>
 
       <div className='mx-auto' style={{ maxWidth: 800, minHeight: 300 }}>
