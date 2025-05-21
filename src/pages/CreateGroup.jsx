@@ -1,10 +1,11 @@
-import React, { use } from 'react';
-import { AuthContext } from '../provider/AuthProvider';
+import React, { use } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 function createGroup() {
-    const { user } = use(AuthContext);
+  const { user } = use(AuthContext);
 
-    const hobbyOptions = [
+  const hobbyOptions = [
     "Drawing & Painting",
     "Photography",
     "Video Gaming",
@@ -20,12 +21,38 @@ function createGroup() {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-    const newGroup = Object.fromEntries(formData.entries())
+    const newGroup = Object.fromEntries(formData.entries());
+    newGroup.userName = user.displayName;
+    newGroup.userEmail = user.email;
     console.log(newGroup);
+
+    fetch("http://localhost:3000/groups", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newGroup),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          console.log("added successfully.");
+
+          Swal.fire({
+            title: "Group create successfully!",
+            icon: "success",
+            draggable: true,
+          });
+
+          //   form.reset()
+        }
+      });
   };
   return (
     <div className="max-w-2xl mx-auto p-6 bg-base-200 rounded-2xl shadow-xl my-10">
-      <h2 className="text-3xl font-bold text-center mb-6">Create a New Hobby Group</h2>
+      <h2 className="text-3xl font-bold text-center mb-6">
+        Create a New Hobby Group
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="form-control">
           <label className="label font-semibold">Group Name</label>
@@ -46,7 +73,9 @@ function createGroup() {
           >
             <option value="">Select a category</option>
             {hobbyOptions.map((option, index) => (
-              <option key={index} value={option}>{option}</option>
+              <option key={index} value={option}>
+                {option}
+              </option>
             ))}
           </select>
         </div>
