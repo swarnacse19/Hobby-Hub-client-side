@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import HubSlider from '../Components/HubSlider';
 import Lottie from 'lottie-react';
 import animationData from './Welcome.json';
+import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
 
 function Home() {
   const [theme, setTheme] = useState('light');
@@ -21,15 +22,11 @@ function Home() {
 
   return (
     <div className='transition-all duration-300'>
-      <HubSlider></HubSlider>
 
-      <div className='text-center my-4'>
-        <button 
-          onClick={toggleTheme} 
-          className='px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 transition'>
-          Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
-        </button>
+      <div className='flex gap-2 justify-end my-4' onClick={toggleTheme}>   <span>Change Mode</span>    
+          {theme === 'light' ? <MdDarkMode size={30}/> : <MdOutlineLightMode size={30}/>}
       </div>
+      <HubSlider></HubSlider>
 
       <div className='mx-auto' style={{ maxWidth: 800, minHeight: 300 }}>
         <Lottie animationData={animationData} loop={true} />

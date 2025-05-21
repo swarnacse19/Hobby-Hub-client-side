@@ -36,7 +36,7 @@ function HubSlider() {
     centerPadding: "150px",
     slidesToShow: 1,
     infinite: true,
-    arrows: true,
+    arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
     dots: false,
