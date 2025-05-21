@@ -3,13 +3,13 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router";
-// import { AuthContext } from "../provider/AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 
 function Login() {
   const [error, setError] = useState("");
   const emailRef = useRef();
-//   const { signIn, resetPassword, signInWithGoogle } = use(AuthContext);
+  const { signIn, resetPassword, signInWithGoogle } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const handleLogin = (e) => {
@@ -18,41 +18,41 @@ function Login() {
     const email = form.email.value;
     const password = form.password.value;
 
-    //console.log({email, password});
-    // signIn(email, password)
-    //   .then((result) => {
-    //     //const user = result.user;
-    //     toast.success("Login successful!");
-    //     setTimeout(
-    //       () => navigate(`${location.state ? location.state : "/"}`),
-    //       3000
-    //     );
-    //   })
-    //   .catch((error) => {
-    //     const errorCode = error.code;
-    //     //const errorMessage = error.message;
-    //     setError(errorCode);
-    //   });
+    console.log({email, password});
+    signIn(email, password)
+      .then((result) => {
+        //const user = result.user;
+        toast.success("Login successful!");
+        setTimeout(
+          () => navigate(`${location.state ? location.state : "/"}`),
+          3000
+        );
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        //const errorMessage = error.message;
+        setError(errorCode);
+      });
   };
 
   const handleForgetPassword = () => {
     const email = emailRef.current.value;
 
-    // if (!email) {
-    //   toast.error("Please enter your email address first!");
-    //   return;
-    // }
+    if (!email) {
+      toast.error("Please enter your email address first!");
+      return;
+    }
 
-    // setError("");
-    // resetPassword(email)
-    //   .then(() => {
-    //     toast.warning(
-    //       "A password reset email is sent. Please check your inbox."
-    //     );
-    //   })
-    //   .catch((error) => {
-    //     setError(error.message);
-    //   });
+    setError("");
+    resetPassword(email)
+      .then(() => {
+        toast.warning(
+          "A password reset email is sent. Please check your inbox."
+        );
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
   return (
     <div className="bg-base-200">
@@ -103,20 +103,20 @@ function Login() {
               <button
                 type="button"
                 className="btn bg-black w-full text-white border-[#e5e5e5]"
-                // onClick={() => {
-                //   signInWithGoogle()
-                //     .then((result) => {
-                //       toast.success("Signed in with Google!");
-                //       setTimeout(
-                //         () =>
-                //           navigate(`${location.state ? location.state : "/"}`),
-                //         3000
-                //       );
-                //     })
-                //     .catch((error) => {
-                //       setError(error.message);
-                //     });
-                // }}
+                onClick={() => {
+                  signInWithGoogle()
+                    .then((result) => {
+                      toast.success("Signed in with Google!");
+                      setTimeout(
+                        () =>
+                          navigate(`${location.state ? location.state : "/"}`),
+                        3000
+                      );
+                    })
+                    .catch((error) => {
+                      setError(error.message);
+                    });
+                }}
               >
                 <FcGoogle size={25} />
                 Login with Google
