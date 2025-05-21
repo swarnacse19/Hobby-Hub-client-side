@@ -52,7 +52,7 @@ function Navbar() {
         console.log(error);
       });
   };
-  console.log(user);
+  //console.log(user);
 
   return (
     <div className="navbar">
