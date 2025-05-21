@@ -1,13 +1,13 @@
 import React, { use, useState } from "react";
 import { Link, useNavigate } from "react-router";
-//import { AuthContext } from "../provider/AuthProvider";
+import { AuthContext } from "../provider/AuthProvider";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { FcGoogle } from "react-icons/fc";
 import { ToastContainer, toast } from "react-toastify";
 
 const Register = () => {
-//   const { createUser, setUser, updateUser, signInWithGoogle } = use(AuthContext);
+   const { createUser, setUser, updateUser, signInWithGoogle } = use(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const handleRegister = (e) => {
@@ -22,36 +22,36 @@ const Register = () => {
     const uppercasePattern = /[A-Z]/;
     const lowercasePattern = /[a-z]/;
 
-    // if (password.length < 6) {
-    //   setError("Password must be at least 6 characters long");
-    //   return;
-    // } else if (!uppercasePattern.test(password)) {
-    //   setError("Password must contain at least one uppercase letter");
-    //   return;
-    // } else if (!lowercasePattern.test(password)) {
-    //   setError("Password must contain at least one lowercase letter");
-    //   return;
-    // } else {
-    //   setError("");
-    // }
-    // createUser(email, password)
-    //   .then((result) => {
-    //     const user = result.user;
-    //     updateUser({ displayName: name, photoURL: photo })
-    //       .then(() => {
-    //         setUser({ ...user, displayName: name, photoURL: photo });
-    //         toast.success("Registration successful!");
-    //         setTimeout(() => navigate("/"), 3000);
-    //       })
-    //       .catch((error) => {
-    //         setUser(user);
-    //       });
-    //   })
-    //   .catch((error) => {
-    //     //const errorCode = error.code;
-    //     const errorMessage = error.message;
-    //     setError(errorMessage);
-    //   });
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long");
+      return;
+    } else if (!uppercasePattern.test(password)) {
+      setError("Password must contain at least one uppercase letter");
+      return;
+    } else if (!lowercasePattern.test(password)) {
+      setError("Password must contain at least one lowercase letter");
+      return;
+    } else {
+      setError("");
+    }
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+            toast.success("Registration successful!");
+            setTimeout(() => navigate("/"), 3000);
+          })
+          .catch((error) => {
+            setUser(user);
+          });
+      })
+      .catch((error) => {
+        //const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(errorMessage);
+      });
   };
   return (
     <div className="bg-base-200">
@@ -118,16 +118,16 @@ const Register = () => {
               <button
                 type="button"
                 className="btn w-full text-pink-700 border-pink-700"
-                // onClick={() => {
-                //   signInWithGoogle()
-                //     .then((result) => {
-                //       toast.success("Signed in with Google successfully!");
-                //       setTimeout(() => navigate("/"), 3000);
-                //     })
-                //     .catch((error) => {
-                //       setError(error.message);
-                //     });
-                // }}
+                onClick={() => {
+                  signInWithGoogle()
+                    .then((result) => {
+                      toast.success("Signed in with Google successfully!");
+                      setTimeout(() => navigate("/"), 3000);
+                    })
+                    .catch((error) => {
+                      setError(error.message);
+                    });
+                }}
               >
                 <FcGoogle size={25} />
                 Sign up with Google
