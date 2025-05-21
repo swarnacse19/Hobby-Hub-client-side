@@ -61,7 +61,7 @@ function Navbar() {
         <ul className="menu menu-horizontal px-1 gap-7 text-xl font-light">{links}</ul>
       </div>
       <div className="navbar-end">
-      <div className="flex gap-5">
+      <div className="flex gap-3">
         {/* <img
           className="w-12 rounded-full"
           src={`${user ? user.photoURL : userIcon}`}
@@ -79,7 +79,8 @@ function Navbar() {
           <Link to="/login" className="btn bg-blue-600 text-white font-semibold">
             Login
           </Link>
-        )} */} <button className="btn">login</button>
+        )} */} <button className="btn bg-white text-pink-700 border-2 border-pink-700 font-semibold hover:bg-pink-200">Login</button>
+        <button className="btn bg-white text-green-700 border-2 border-green-700 font-semibold hover:bg-green-200">Register</button>
       </div>
       </div>
       {/* <ToastContainer position="top-right" autoClose={3000} /> */}

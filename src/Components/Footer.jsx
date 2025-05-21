@@ -15,13 +15,13 @@ function Footer() {
   );
 
   return (
-    <div className="h-[423px] py-25 px-20 flex justify-center items-center bg-pink-400 text-white">
+    <div className="h-[423px] py-25 px-20 flex justify-center items-center bg-pink-500 text-white">
       <div>
         <div className="flex justify-center mb-5 items-center gap-2">
-          <img src={hobbyHub} className="w-10" alt="" />
-                    <h2 className="text-2xl font-semibold">Hobby<span className="text-pink-700">Hub</span></h2>
+          <img src={hobbyHub} className="w-10 border border-white rounded-[50%]" alt="" />
+                    <h2 className="text-2xl font-semibold">Hobby<span className="text-pink-800">Hub</span></h2>
         </div>
-        <div className="flex gap-5 list-none">{links}</div>
+        <div className="flex flex-col lg:flex-row text-center gap-5 list-none font-semibold">{links}</div>
         <div className="flex gap-5 justify-center mt-4">
           <a href="https://facebook.com" target="_blank">
             <FaFacebookF

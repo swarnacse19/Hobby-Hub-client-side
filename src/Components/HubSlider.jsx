@@ -53,7 +53,7 @@ function HubSlider() {
               className="rounded-xl shadow-lg object-cover h-[400px] w-full"
             />
             <div className="absolute inset-0 bg-opacity-40 rounded-xl flex flex-col items-center justify-center text-white text-center px-4">
-              <h2 className="text-xl md:text-2xl md:font-bold text-pink-700 bg-white px-7 py-2 border border-pink-800">{slide.title}</h2>
+              <h2 className="text-xs md:text-2xl md:font-bold text-pink-700 bg-white px-7 py-2 border border-pink-800">{slide.title}</h2>
               <button className="mt-4 bg-pink-700 text-white px-4 py-2 rounded hover:bg-gray-200 transition">
                 {slide.button}
               </button>

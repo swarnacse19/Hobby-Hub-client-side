@@ -11,4 +11,21 @@ a.active {
   color: deeppink;
 }
 
+/* index.css or App.css */
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+
 
