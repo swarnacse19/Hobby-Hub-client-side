@@ -17,9 +17,9 @@ function Ongoing() {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 my-10 py-8 text-black">
+    <div className="max-w-6xl mx-auto px-4 my-10 py-8">
       <h2 className="text-3xl font-bold mb-6 text-center"> Ongoing Groups</h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 text-black">
         {groups.map(group => (
           <div key={group._id} className="card bg-base-100 shadow-md hover:shadow-xl transition-all">
             <figure><img src={group.imageUrl} alt={group.groupName} className="h-48 w-full object-cover" /></figure>

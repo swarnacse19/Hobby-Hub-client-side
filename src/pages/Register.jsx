@@ -54,11 +54,11 @@ const Register = () => {
       });
   };
   return (
-    <div className="bg-base-200 text-black">
+    <div className="bg-base-200">
       <header className="max-w-11/12 mx-auto">
         <Navbar></Navbar>
       </header>
-      <div className="flex justify-center my-15 items-center">
+      <div className="flex justify-center my-15 items-center text-black">
         <div className="card bg-white w-full max-w-sm shrink-0 shadow-2xl py-5">
           <h2 className="font-semibold text-2xl text-center">
             Register your account

@@ -8,7 +8,7 @@ const WhyJoin = () => {
   return (
     <section className="py-10 bg-base-200 my-10 text-black">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-xs md:text-2xl font-bold mb-6 text-pink-700">Why Join HobbyHub?</h2>
+        <h2 className="text-2xl font-bold mb-6 text-pink-700">Why Join HobbyHub?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="card bg-base-100 shadow-xl">
             <div className="card-body items-center text-center">

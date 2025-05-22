@@ -57,7 +57,7 @@ function Navbar() {
   //console.log(user);
 
   return (
-    <div className="navbar text-black">
+    <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -84,7 +84,7 @@ function Navbar() {
             {links}
           </ul>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-2">
           <img src={hobbyHub} className="w-10" alt="" />
           <h2 className="text-2xl font-semibold">
             Hobby<span className="text-pink-700">Hub</span>
