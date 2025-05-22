@@ -12,7 +12,7 @@ function MyData({ group, openModal, handleDelete }) {
   } = group;
 
   return (
-    <tr className="border-t border-neutral-400">
+    <tr className="border-t border-neutral-400 text-black">
       <td className="font-semibold">{groupName}</td>
       <td>{hobbyCategory}</td>
       <td>{maxMembers}</td>

@@ -54,7 +54,7 @@ const Register = () => {
       });
   };
   return (
-    <div className="bg-base-200">
+    <div className="bg-base-200 text-black">
       <header className="max-w-11/12 mx-auto">
         <Navbar></Navbar>
       </header>

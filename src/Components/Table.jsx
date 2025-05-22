@@ -5,10 +5,10 @@ function Table({groups}) {
     console.log(groups);
   return (
     <div>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto text-black">
   <table className="table table-md">
     <thead>
-      <tr className='bg-amber-200'>
+      <tr className='bg-black text-white'>
         <th>Group Name</th>
         <th>Hobby Category</th>
         <th>Max members</th>

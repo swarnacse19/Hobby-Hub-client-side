@@ -7,6 +7,15 @@ import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { Tooltip } from "react-tooltip";
 
 function Navbar() {
+
+  const links = (
+    <>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/groups">All Groups</NavLink>
+      <NavLink to="/createGroup">Create Group</NavLink>
+      <NavLink to="/myGroups">My Groups</NavLink>
+    </>
+  );
   const location = useLocation();
   const [theme, setTheme] = useState("light");
 
@@ -34,16 +43,8 @@ function Navbar() {
       document.body.className = newTheme;
     }
   };
-
-  const links = (
-    <>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/groups">All Groups</NavLink>
-      <NavLink to="/createGroup">Create Group</NavLink>
-      <NavLink to="/myGroups">My Groups</NavLink>
-    </>
-  );
   const { user, logOut } = use(AuthContext);
+
   const handleLogOut = () => {
     logOut()
       .then(() => {

@@ -6,7 +6,7 @@ function AllGroups() {
     const groups = useLoaderData();
     //console.log(groups);
   return (
-    <div className='my-10'>
+    <div className='my-10 text-black'>
       <Table groups={groups}></Table>
     </div>
   );

@@ -9,6 +9,7 @@ import PrivateRoute from "../provider/PrivateRoute";
 import AllGroups from "../pages/AllGroups";
 import Loading from "../pages/Loading";
 import MyGroup from "../pages/MyGroup";
+import GroupDetails from "../pages/GroupDetails";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,16 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <MyGroup></MyGroup>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/groups/:id",
+        loader: ({params}) => fetch(`https://assignment-10-server-side-blue.vercel.app/groups/${params.id}`),
+        hydrateFallbackElement: <Loading></Loading>,
+        element: (
+          <PrivateRoute>
+            <GroupDetails></GroupDetails>
           </PrivateRoute>
         ),
       },
