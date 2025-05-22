@@ -2,6 +2,7 @@ import React from 'react';
 import HubSlider from '../Components/HubSlider';
 import Lottie from 'lottie-react';
 import animationData from './Welcome.json';
+import WhyJoin from '../Components/WhyJoin';
 
 function Home() {
   
@@ -16,6 +17,7 @@ function Home() {
           Explore hobby groups around you and get connected!
         </p>
       </div>
+      <WhyJoin></WhyJoin>
     </div>
   );
 }
