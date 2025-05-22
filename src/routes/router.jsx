@@ -6,6 +6,8 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import CreateGroup from "../pages/CreateGroup";
 import PrivateRoute from "../provider/PrivateRoute";
+import AllGroups from "../pages/AllGroups";
+import Loading from "../pages/Loading";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +17,12 @@ const router = createBrowserRouter([
             {
                 index: true,
                 Component: Home
+            },
+            {
+                path: "/groups",
+                loader: () => fetch('http://localhost:3000/groups'),
+                hydrateFallbackElement: <Loading></Loading>,
+                Component: AllGroups
             },
             {
                 path: '/createGroup',
