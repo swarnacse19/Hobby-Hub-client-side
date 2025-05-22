@@ -36,7 +36,6 @@ function createGroup() {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          console.log("added successfully.");
 
           Swal.fire({
             title: "Group create successfully!",
