@@ -8,8 +8,8 @@ hobbyCategory, groupName
 //console.log(userName, startDate, meetingLocation, maxMembers, 
 //hobbyCategory, groupName);
   return (
-    <tr>
-        <td>{groupName}</td>
+    <tr className='border-t border-neutral-400'>
+        <td className='font-semibold'>{groupName}</td>
         <td>{hobbyCategory}</td>
         <td>{maxMembers}</td>
         <td>{meetingLocation}</td>

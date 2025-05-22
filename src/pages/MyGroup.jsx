@@ -23,7 +23,7 @@ function myGroup() {
         <div className="overflow-x-auto">
         <table className="table table-md">
     <thead>
-      <tr>
+      <tr className="bg-amber-200">
         <th>Group Name</th>
         <th>Hobby Category</th>
         <th>Max members</th>
