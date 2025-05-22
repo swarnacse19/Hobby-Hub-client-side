@@ -1,13 +1,19 @@
-import React from 'react';
-import { useLoaderData } from 'react-router';
-import Table from '../Components/Table';
+import React from "react";
+import { useLoaderData } from "react-router";
+import Table from "../Components/Table";
+import { Helmet } from "react-helmet-async";
 
 function AllGroups() {
-    const groups = useLoaderData();
-    //console.log(groups);
+  const groups = useLoaderData();
+  //console.log(groups);
   return (
-    <div className='my-10 text-black'>
-      <Table groups={groups}></Table>
+    <div>
+      <Helmet>
+        <title>All Groups</title>
+      </Helmet>
+      <div className="my-10 text-black">
+        <Table groups={groups}></Table>
+      </div>
     </div>
   );
 }

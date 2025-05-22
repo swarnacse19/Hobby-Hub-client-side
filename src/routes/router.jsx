@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/groups/:id",
+        path: "/group/:id",
         loader: ({params}) => fetch(`https://assignment-10-server-side-blue.vercel.app/groups/${params.id}`),
         hydrateFallbackElement: <Loading></Loading>,
         element: (

@@ -15,7 +15,7 @@ hobbyCategory, groupName, _id
         <td>{meetingLocation}</td>
         <td>{startDate}</td>
         <td>{userName}</td>
-        <td><Link to={`/groups/${_id}`} className='btn'>see more</Link></td>
+        <td><Link to={`/group/${_id}`} className='btn'>see more</Link></td>
     </tr>
   );
 }

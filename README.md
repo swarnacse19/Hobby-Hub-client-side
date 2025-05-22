@@ -1,12 +1,36 @@
-# React + Vite
+# HobbyHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HobbyHub is a platform where users can discover, join, and create local hobby-based groups like web developing bootcamp, book clubs, painting circles, hiking crews, and more. The platform fosters community building around shared interests and promotes meaningful social interaction through hobby-driven events.
 
-Currently, two official plugins are available:
+# Live link:
+https://hobby-hub-auth-a7450.web.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Here are the key features:
+- **Featured Hobby Groups** – Displays 6 dynamic ongoing groups on the homepage.
+- **Authentication System** – Email/password login and registration using Firebase, along with Google OAuth login.
+- **Create, Update, and Manage Groups** – Users can create hobby groups with details like category, meeting location, and more.
+- **My Groups Dashboard** – Logged-in users can view, edit, or delete their created groups.
+- **Protected Routes** – Routes like Create Group, My Groups, and Group Details are secured and require login.
+- **Toast & SweetAlert Notifications** – Used for login errors, success messages, and delete confirmations.
+- **Group Status Validation** – Users cannot join groups if the start date has already passed.
+- **Dark/Light Mode** – Toggle between dark and light themes on the home page.
+- **Interactive UI Enhancements** – Integrated Lottie animations and Awesome Reveal effects for a smooth experience.
+- **Responsive Design** – Fully optimized for mobile, tablet, and desktop devices.
 
-## Expanding the ESLint configuration
+# Npm packages
+- react-router
+- firebase
+- react-toastify
+- react-icons
+- tailwindcss
+- daisyui
+- react-helmet-async
+- dayjs
+- lottie-react
+- sweetalert2
+- react-tooltip
+- react-awesome-reveal
+- react-simple-typewriter
+- slick-carousel
+- react-slick
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

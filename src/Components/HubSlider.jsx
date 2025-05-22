@@ -33,7 +33,7 @@ const slides = [
 function HubSlider() {
   const settings = {
     centerMode: true,
-    centerPadding: "150px",
+    centerPadding: "60px",
     slidesToShow: 1,
     infinite: true,
     arrows: false,
@@ -43,7 +43,7 @@ function HubSlider() {
   };
 
   return (
-    <div className="mb-7 mt-10">
+    <div className="mb-7 mt-10 text-black">
       <Slider {...settings} className="gap-3">
         {slides.map((slide, index) => (
           <div key={index} className="relative px-2">

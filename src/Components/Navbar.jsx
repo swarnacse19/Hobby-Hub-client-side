@@ -57,7 +57,7 @@ function Navbar() {
   //console.log(user);
 
   return (
-    <div className="navbar">
+    <div className="navbar text-black">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -118,7 +118,7 @@ function Navbar() {
           {user ? (
             <button
               onClick={handleLogOut}
-              className="btn bg-pink-700 text-white font-semibold"
+              className="btn bg-white border-2 border-green-500 font-semibold"
             >
               Logout
             </button>
