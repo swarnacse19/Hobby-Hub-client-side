@@ -4,6 +4,7 @@ import Lottie from 'lottie-react';
 import animationData from './Welcome.json';
 import WhyJoin from '../Components/WhyJoin';
 import HowItWorks from '../Components/HowItWorks';
+import Ongoing from '../Components/OngoingGroup';
 
 function Home() {
   
@@ -18,6 +19,7 @@ function Home() {
           Explore hobby groups around you and get connected!
         </p>
       </div>
+      <Ongoing></Ongoing>
       <WhyJoin></WhyJoin>
       <HowItWorks></HowItWorks>
     </div>
