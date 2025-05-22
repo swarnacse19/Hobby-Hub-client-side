@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import hobbyHub from "../assets/hobbyHub.png";
 import { MdDarkMode, MdOutlineLightMode } from "react-icons/md";
+import { Tooltip } from "react-tooltip";
 
 function Navbar() {
   const location = useLocation();
@@ -39,7 +40,7 @@ function Navbar() {
       <NavLink to="/">Home</NavLink>
       <NavLink to="/groups">All Groups</NavLink>
       <NavLink to="/createGroup">Create Group</NavLink>
-      <NavLink to="/myGroups ">My Groups</NavLink>
+      <NavLink to="/myGroups">My Groups</NavLink>
     </>
   );
   const { user, logOut } = use(AuthContext);
@@ -96,14 +97,21 @@ function Navbar() {
       </div>
       <div className="navbar-end">
         <div className="flex items-center gap-3">
-
           {user && (
-            <img
-              className="w-12 rounded-full"
-              src={user.photoURL}
-              alt=""
-              title={user.displayName}
-            />
+            <>
+              <img
+                data-tooltip-id="user-tooltip"
+                data-tooltip-content={user.displayName}
+                className="w-12 rounded-full cursor-pointer"
+                src={user.photoURL}
+                alt="User"
+              />
+              <Tooltip
+                id="user-tooltip"
+                place="bottom"
+                className="text-sm font-medium"
+              />
+            </>
           )}
 
           {user ? (
