@@ -3,6 +3,7 @@ import HubSlider from '../Components/HubSlider';
 import Lottie from 'lottie-react';
 import animationData from './Welcome.json';
 import WhyJoin from '../Components/WhyJoin';
+import HowItWorks from '../Components/HowItWorks';
 
 function Home() {
   
@@ -18,6 +19,7 @@ function Home() {
         </p>
       </div>
       <WhyJoin></WhyJoin>
+      <HowItWorks></HowItWorks>
     </div>
   );
 }
