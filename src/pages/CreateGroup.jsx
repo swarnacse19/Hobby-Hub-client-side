@@ -26,7 +26,7 @@ function createGroup() {
     newGroup.userEmail = user.email;
     console.log(newGroup);
 
-    fetch("http://localhost:3000/groups", {
+    fetch("https://assignment-10-server-side-blue.vercel.app/groups", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -36,7 +36,6 @@ function createGroup() {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-
           Swal.fire({
             title: "Group create successfully!",
             icon: "success",

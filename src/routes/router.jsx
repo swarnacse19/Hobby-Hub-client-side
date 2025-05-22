@@ -11,52 +11,54 @@ import Loading from "../pages/Loading";
 import MyGroup from "../pages/MyGroup";
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        Component: Root,
-        children: [
-            {
-                index: true,
-                Component: Home
-            },
-            {
-                path: "/groups",
-                loader: () => fetch('http://localhost:3000/groups'),
-                hydrateFallbackElement: <Loading></Loading>,
-                Component: AllGroups
-            },
-            {
-                path: '/createGroup',
-                element: (
-                    <PrivateRoute>
-                        <CreateGroup></CreateGroup>
-                    </PrivateRoute>
-                ),
-            },
-            {
-                path: "/myGroups",
-                loader: () => fetch('http://localhost:3000/groups'),
-                hydrateFallbackElement: <Loading></Loading>,
-                element: (
-                    <PrivateRoute>
-                        <MyGroup></MyGroup>
-                    </PrivateRoute>
-                ),
-            },
-        ]
-    },
-    {
-        path: "/login",
-        Component: Login
-    },
-    {
-        path: "/register",
-        Component: Register
-    },
-    {
-        path: "/*",
-        Component: ErrorPage
-    }
+  {
+    path: "/",
+    Component: Root,
+    children: [
+      {
+        index: true,
+        Component: Home,
+      },
+      {
+        path: "/groups",
+        loader: () =>
+          fetch("https://assignment-10-server-side-blue.vercel.app/groups"),
+        hydrateFallbackElement: <Loading></Loading>,
+        Component: AllGroups,
+      },
+      {
+        path: "/createGroup",
+        element: (
+          <PrivateRoute>
+            <CreateGroup></CreateGroup>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/myGroups",
+        loader: () =>
+          fetch("https://assignment-10-server-side-blue.vercel.app/groups"),
+        hydrateFallbackElement: <Loading></Loading>,
+        element: (
+          <PrivateRoute>
+            <MyGroup></MyGroup>
+          </PrivateRoute>
+        ),
+      },
+    ],
+  },
+  {
+    path: "/login",
+    Component: Login,
+  },
+  {
+    path: "/register",
+    Component: Register,
+  },
+  {
+    path: "/*",
+    Component: ErrorPage,
+  },
 ]);
 
 export default router;

@@ -36,7 +36,7 @@ function MyGroup() {
     const formData = new FormData(form);
     const newData = Object.fromEntries(formData.entries());
 
-    fetch(`http://localhost:3000/groups/${id}`, {
+    fetch(`https://assignment-10-server-side-blue.vercel.app/groups/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -51,11 +51,11 @@ function MyGroup() {
             icon: "success",
           });
           const updatedGroup = { ...selectedGroup, ...newData };
-        updatedGroup._id = id; 
+          updatedGroup._id = id;
 
-        setMyGroup((prev) =>
-          prev.map((g) => (g._id === id ? updatedGroup : g))
-        );
+          setMyGroup((prev) =>
+            prev.map((g) => (g._id === id ? updatedGroup : g))
+          );
           closeModal();
         }
       });
@@ -72,9 +72,12 @@ function MyGroup() {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/groups/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://assignment-10-server-side-blue.vercel.app/groups/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount) {
