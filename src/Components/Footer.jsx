@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white pt-20 pb-7 mt-10">
+    <footer className="bg-black text-white w-full pt-20 pb-7 mt-10">
       <div className="max-w-6xl md:mx-auto px-4 grid gap-8 md:grid-cols-3 text-sm">
         <div className="flex mb-5 items-center gap-2">
           <img src={hobbyHub} className="w-10 border border-white rounded-[50%]" alt="" />

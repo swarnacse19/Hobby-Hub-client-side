@@ -79,14 +79,14 @@ function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 font-medium text-[18px] shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 font-medium text-black text-[18px] shadow"
           >
             {links}
           </ul>
         </div>
-        <div className="hidden md:flex items-center gap-2">
+        <div className="flex items-center gap-2">
           <img src={hobbyHub} className="w-10" alt="" />
-          <h2 className="text-2xl font-semibold">
+          <h2 className="hidden md:flex text-2xl font-semibold">
             Hobby<span className="text-pink-700">Hub</span>
           </h2>
         </div>

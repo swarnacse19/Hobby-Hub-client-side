@@ -108,31 +108,38 @@ function MyGroup() {
 
   return (
     <div className="my-10 text-black">
-      <div className="overflow-x-auto">
-        <table className="table table-md">
-          <thead>
-            <tr className="bg-black text-white">
-              <th>Group Name</th>
-              <th>Hobby Category</th>
-              <th>Max members</th>
-              <th>Meeting location</th>
-              <th>Start Date</th>
-              <th>Admin</th>
-              <th>Button</th>
-            </tr>
-          </thead>
-          <tbody>
-            {myGroup.map((group) => (
-              <MyData
-                key={group._id}
-                group={group}
-                openModal={openModal}
-                handleDelete={handleDelete}
-              />
-            ))}
-          </tbody>
-        </table>
-      </div>
+      {myGroup.length === 0 ? (
+        <div className="max-w-5xl mx-auto bg-gray-100 shadow-md rounded-xl py-24 text-center">
+          <h2 className="text-2xl font-semibold mb-2 text-red-600">No Groups Found</h2>
+          <p className="text-gray-600">Please create your own group to get started.</p>
+        </div>
+      ) : (
+        <div className="overflow-x-auto">
+          <table className="table table-md">
+            <thead>
+              <tr className="bg-black text-white">
+                <th>Group Name</th>
+                <th>Hobby Category</th>
+                <th>Max members</th>
+                <th>Meeting location</th>
+                <th>Start Date</th>
+                <th>Admin</th>
+                <th>Button</th>
+              </tr>
+            </thead>
+            <tbody>
+              {myGroup.map((group) => (
+                <MyData
+                  key={group._id}
+                  group={group}
+                  openModal={openModal}
+                  handleDelete={handleDelete}
+                />
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
 
       {isModalOpen && selectedGroup && (
         <dialog open className="modal modal-open">
