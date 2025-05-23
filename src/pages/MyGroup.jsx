@@ -107,7 +107,7 @@ function MyGroup() {
   ];
 
   return (
-    <div className="my-10 text-black">
+    <div className="my-10 text-black min-h-screen">
       {myGroup.length === 0 ? (
         <div className="max-w-5xl mx-auto bg-gray-100 shadow-md rounded-xl py-24 text-center">
           <h2 className="text-2xl font-semibold mb-2 text-red-600">No Groups Found</h2>
