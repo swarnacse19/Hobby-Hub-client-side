@@ -43,7 +43,7 @@ const WhyJoin = () => {
         <h2 className="text-4xl font-extrabold mb-4">
           Why Join <span className="text-pink-600">HobbyHub?</span>
         </h2>
-        <p className="text-gray-400 mb-12 max-w-3xl mx-auto">
+        <p className="text-gray-500 mb-12 max-w-3xl mx-auto">
           We provide the essential tools and community support to turn your
           passion into connection and growth.
         </p>
@@ -54,7 +54,7 @@ const WhyJoin = () => {
             <div
               key={index}
               
-              className="p-6 rounded-xl bg-gradient-to-br from-green-50 via-pink-50 to-teal-50 shadow
+              className="p-6 rounded-xl bg-gradient-to-br from-pink-200 to-red-300 shadow
                                 transition-all duration-300 transform hover:scale-[1.03]"
             >
               <div className="card-body items-center text-center p-0">
@@ -71,7 +71,7 @@ const WhyJoin = () => {
                 </h3>
 
                 
-                <p className="text-gray-400 text-sm">{feature.description}</p>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
               </div>
             </div>
           ))}

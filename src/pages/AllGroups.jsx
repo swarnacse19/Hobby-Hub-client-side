@@ -11,7 +11,7 @@ function AllGroups() {
       <Helmet>
         <title>All Groups</title>
       </Helmet>
-      <div className="my-10 text-black">
+      <div className="my-10">
         <Table groups={groups}></Table>
       </div>
     </div>

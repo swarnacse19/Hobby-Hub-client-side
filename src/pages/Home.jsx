@@ -5,6 +5,7 @@ import HowItWorks from '../Components/HowItWorks';
 import Ongoing from '../Components/OngoingGroup';
 import LottieSection from '../Components/LottieSection';
 import TopCategories from '../Components/TopCategories';
+import CallToAction from '../Components/CallToAction';
 
 function Home() {
   
@@ -16,6 +17,7 @@ function Home() {
       <TopCategories></TopCategories>
       <WhyJoin></WhyJoin>
       <HowItWorks></HowItWorks>
+      <CallToAction></CallToAction>
     </div>
   );
 }

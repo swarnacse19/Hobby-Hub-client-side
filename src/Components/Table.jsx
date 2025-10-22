@@ -5,7 +5,7 @@ function Table({groups}) {
     console.log(groups);
   return (
     <div>
-        <div className="overflow-x-auto text-black">
+        <div className="overflow-x-auto">
   <table className="table table-md">
     <thead>
       <tr className='bg-black text-white'>

@@ -5,7 +5,7 @@ import animationData from "./Welcome.json";
 function LottieSection() {
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <section className="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-br from-green-50 via-pink-50 to-teal-50 rounded-3xl shadow-sm px-4 my-24">
+      <section className="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-br from-pink-300 via-blue-100 to-red-300 rounded-3xl shadow-sm px-4 my-24">
 
       {/* Lottie Animation */}
       <div className="w-full flex justify-center mb-8">

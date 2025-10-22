@@ -77,7 +77,7 @@ const TopCategories = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-800 mb-2">
+          <h2 className="text-4xl font-bold mb-2">
             Browse Top Categories
           </h2>
           <p className="text-gray-500 text-lg">
@@ -103,12 +103,12 @@ const TopCategories = () => {
               </div>
 
               
-              <h3 className="text-xl font-semibold text-gray-800 mb-1">
+              <h3 className="text-xl font-semibold text-gray-700 mb-1">
                 {category.name}
               </h3>
 
               
-              <p className="text-sm text-gray-500">{category.count} Groups</p>
+              <p className="text-sm text-gray-700">{category.count} Groups</p>
             </div>
           ))}
         </div>

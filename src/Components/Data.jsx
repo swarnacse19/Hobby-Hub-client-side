@@ -8,7 +8,7 @@ hobbyCategory, groupName, _id
 //console.log(userName, startDate, meetingLocation, maxMembers, 
 //hobbyCategory, groupName);
   return (
-    <tr className='border-t border-neutral-400 text-black'>
+    <tr className='border-t border-neutral-400'>
         <td className='font-semibold'>{groupName}</td>
         <td>{hobbyCategory}</td>
         <td>{maxMembers}</td>
