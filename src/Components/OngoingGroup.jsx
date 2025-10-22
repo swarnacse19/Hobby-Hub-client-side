@@ -18,7 +18,7 @@ function Ongoing() {
 
   return (
     <div className="mx-auto px-4 max-w-7xl my-40">
-      <h2 className="text-3xl text-pink-700 font-bold mb-16 text-center"> Ongoing Groups</h2>
+      <h2 className="text-4xl font-bold mb-16 text-center"> Ongoing Groups</h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {groups.map(group => (
           <div key={group._id} className="shadow-md hover:shadow-xl transition-all">

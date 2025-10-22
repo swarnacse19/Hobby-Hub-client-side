@@ -4,6 +4,7 @@ import WhyJoin from '../Components/WhyJoin';
 import HowItWorks from '../Components/HowItWorks';
 import Ongoing from '../Components/OngoingGroup';
 import LottieSection from '../Components/LottieSection';
+import TopCategories from '../Components/TopCategories';
 
 function Home() {
   
@@ -12,6 +13,7 @@ function Home() {
       <HubSlider></HubSlider>
       <LottieSection></LottieSection>
       <Ongoing></Ongoing>
+      <TopCategories></TopCategories>
       <WhyJoin></WhyJoin>
       <HowItWorks></HowItWorks>
     </div>
