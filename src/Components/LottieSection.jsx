@@ -4,7 +4,8 @@ import animationData from "./Welcome.json";
 
 function LottieSection() {
   return (
-    <section className="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-br from-green-50 via-pink-50 to-teal-50 rounded-3xl shadow-sm px-4 md:px-14 my-24">
+    <div className="max-w-7xl mx-auto px-4">
+      <section className="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-br from-green-50 via-pink-50 to-teal-50 rounded-3xl shadow-sm px-4 my-24">
 
       {/* Lottie Animation */}
       <div className="w-full flex justify-center mb-8">
@@ -17,7 +18,7 @@ function LottieSection() {
 
       {/* Text Section */}
       <div className="max-w-2xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h2 className="text-3xl text-black md:text-4xl font-bold mb-4">
           Welcome to HobbyHub 🎨
         </h2>
 
@@ -35,6 +36,7 @@ function LottieSection() {
       </div>
 
     </section>
+    </div>
   );
 }
 

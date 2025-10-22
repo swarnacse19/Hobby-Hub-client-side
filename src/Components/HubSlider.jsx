@@ -43,7 +43,7 @@ function HubSlider() {
   };
 
   return (
-    <div className="mb-7 mt-5 text-black">
+    <div className="mb-7 mt-5 max-w-7xl mx-auto px-4">
       <Slider {...settings} className="gap-3">
         {slides.map((slide, index) => (
           <div key={index} className="relative px-2">
