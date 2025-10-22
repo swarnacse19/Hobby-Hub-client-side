@@ -114,7 +114,7 @@ function Navbar() {
               <div>
                 <Link
                   to="/register"
-                  className="px-4 py-1 rounded-sm border-2 border-pink-700 font-semibold transform transition duration-200 hover:scale-105 cursor-pointer"
+                  className="inline-block px-4 py-1 rounded-sm border-2 border-pink-700 font-semibold cursor-pointer transform transition duration-200 hover:scale-105"
                 >
                   Register
                 </Link>

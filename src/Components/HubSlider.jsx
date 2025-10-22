@@ -39,11 +39,11 @@ function HubSlider() {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000,
-    dots: false,
+    dots: true,
   };
 
   return (
-    <div className="mb-7 mt-10 text-black">
+    <div className="mb-7 mt-5 text-black">
       <Slider {...settings} className="gap-3">
         {slides.map((slide, index) => (
           <div key={index} className="relative px-2">
@@ -52,9 +52,9 @@ function HubSlider() {
               alt={`Slide ${index}`}
               className="rounded-xl shadow-lg object-cover h-[80vh] w-full"
             />
-            <div className="absolute inset-0 bg-opacity-40 rounded-xl flex flex-col items-center justify-center text-white text-center px-4">
-              <h2 className="text-xs md:text-2xl md:font-bold text-pink-700 bg-white px-7 py-2 border border-pink-800">{slide.title}</h2>
-              <button className="mt-4 bg-pink-700 text-white px-4 py-2 rounded hover:bg-gray-200 transition">
+            <div className="absolute inset-0 bg-black/10 rounded-xl flex flex-col items-center justify-center text-white text-center px-4">
+              <h2 className="text-xs md:text-2xl md:font-bold text-pink-700 bg-white px-7 py-2 rounded-xl border border-pink-800">{slide.title}</h2>
+              <button className="mt-4 bg-pink-700 text-white px-4 py-2 rounded cursor-pointer transform transition duration-200 hover:scale-105">
                 {slide.button}
               </button>
             </div>
